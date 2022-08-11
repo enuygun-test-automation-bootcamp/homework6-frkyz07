@@ -1,14 +1,7 @@
 package testscenarios;
 
-import framework.DriverSetup;
-import org.apache.commons.lang.StringUtils;
 import org.junit.Ignore;
 import org.junit.jupiter.api.*;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.ValueSource;
-import pages.LoginPage;
-
-import java.util.concurrent.TimeUnit;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

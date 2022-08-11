@@ -1,18 +1,12 @@
 package testscenarios;
 
-import framework.ConfigReader;
-import framework.DriverSetup;
 import org.junit.BeforeClass;
-import org.junit.Ignore;
 
 import org.junit.Test;
 import org.junit.jupiter.api.AfterAll;
-import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.WebDriver;
-import pages.LoginPage;
 
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
