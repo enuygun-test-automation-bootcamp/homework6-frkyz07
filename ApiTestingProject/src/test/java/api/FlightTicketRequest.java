@@ -37,9 +37,9 @@ public class FlightTicketRequest {
         }*/
         // i made a stream does the same job with for loop
         city_name_code_airport_country.stream().forEach(e->{
-            city_name_code_airport_country.add(flightList[Integer.parseInt(e)].getCity_code()+","+
-                    flightList[Integer.parseInt(e)].getCountry_name()+","+
-                    flightList[Integer.parseInt(e)].getAirport()+","+
+            city_name_code_airport_country.add(flightList[Integer.parseInt(e)].getCity_code()+":"+
+                    flightList[Integer.parseInt(e)].getCountry_name()+":"+
+                    flightList[Integer.parseInt(e)].getAirport()+":"+
                     flightList[Integer.parseInt(e)].getCity_name());
         });
 
