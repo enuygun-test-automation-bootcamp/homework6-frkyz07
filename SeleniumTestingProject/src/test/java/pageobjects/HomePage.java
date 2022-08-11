@@ -35,8 +35,12 @@ public class HomePage {
     public void checkWishInFavorList(String expectedWish){
         JavascriptExecutor jse = (JavascriptExecutor)driver;
         jse.executeScript("window.scrollBy(0,-250)");
+        // in here there was an assertion problem I fixed
+        // before this it was first taking the locator from the home page after adding line on of code
+        // it started to taking in the favorites section
+        String favoriteText = this.elementHelper.findElement(titleOfWish).getText();
         this.elementHelper.findElement(favorites).click();
-        Assert.assertEquals(expectedWish ,this.elementHelper.findElement(titleOfWish).getText());
+        Assert.assertEquals(expectedWish, favoriteText);
 
     }
 }
