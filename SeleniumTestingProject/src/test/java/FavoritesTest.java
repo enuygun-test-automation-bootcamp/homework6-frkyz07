@@ -61,6 +61,18 @@ public class FavoritesTest {
         productPage.goToBucket().click(); // clicking the go to bucket button
         Assert.assertEquals(cartPage.productName().getText(),"Helium balloon");  // checking product name
     }
+    // adding the chanel parfum to the favorites and deleting the product
+    @Test
+    public void addChannelParfumAndDelete(){
+    homePage.searchInput().sendKeys("chanel"); // searching for a product
+    homePage.searchIcon().click(); // clicking the search icon
+    homePage.chanelParfum().click(); // Clicking the chanel parfum that locators find
+    homePage.addWishlist().click(); // Adding the product to the wishlist
+    homePage.wishListIcon().click(); // clicking to the wishlist page
+    homePage.deleteWishes().click(); // Deleting the product
+    Assert.assertEquals(homePage.wishlistIcon().getText(),'0'); // checking if product got deleted
+
+    }
 
 
 }

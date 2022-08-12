@@ -15,13 +15,17 @@ public class HomePage {
     // element finders
     By searchInput = By.id("search-input");
     By searchIcon = By.cssSelector("button[type=submit]");
-    By wishListIcon = By.cssSelector("a[data-tooltip=\"Add to Wishlist\"]");
+    By wishListIcon = By.className("icon-n-072");
     By imageBox = By.cssSelector(".tt-image-box");
     By favorites = By.cssSelector("div[data-tooltip=\"Favorites\"]");
     By titleOfWish = By.xpath("//*/h2[@class='tt-title']");
     By titleOfResWish = By.xpath("//*/h2[@class='tt-title']");
-
     By balloons = By.xpath("//div[text()='Balloons']");
+    By chanelParfum = By.xpath("//div[@id='products']//div//span//a[contains(text(),'Chanel')]");
+    By addWishlist = By.id("add_wishlist");
+    By deleteWishes = By.xpath("//div/a[text()='SİL']");
+    By wishlistIcon = By.xpath("//div/a/button/span[@class='fav-count tt-badge-cart']");
+
 
 
 
@@ -57,6 +61,19 @@ public class HomePage {
     public WebElement balloons(){
         return driver.findElement(balloons);
     }
+    public WebElement chanelParfum(){
+        return driver.findElement(chanelParfum);
+    }
+    public WebElement addWishlist(){
+        return driver.findElement(addWishlist);
+    }
+    public WebElement deleteWishes(){
+        return driver.findElement(deleteWishes);
+    }
+    public WebElement wishlistIcon(){
+        return driver.findElement(wishlistIcon);
+    }
+
 
 
 

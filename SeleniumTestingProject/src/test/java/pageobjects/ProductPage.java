@@ -56,4 +56,5 @@ public class ProductPage {
     public WebElement goToBucket(){
         return driver.findElement(goToBucket);
     }
+
 }
