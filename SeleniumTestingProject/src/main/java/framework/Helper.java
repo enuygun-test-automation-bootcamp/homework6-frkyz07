@@ -14,8 +14,8 @@ import static org.testng.AssertJUnit.assertEquals;
 public class Helper {
 
 
-    WebDriver driver;
-    WebDriverWait wait;
+    static WebDriver driver;
+    static WebDriverWait wait;
 
     public Helper(WebDriver driver)
     {
@@ -70,13 +70,13 @@ public class Helper {
         element.sendKeys(kw);
     }
 
-    public void clickForWebElement(WebElement element){
+    public static void clickForWebElement(WebElement element){
         wait.until(ExpectedConditions.elementToBeClickable(element));
         element.click();
     }
 
     public void clickForWebElementWithWait(WebElement element, int timeout){
-        this.wait=new WebDriverWait(driver,timeout);
+        wait=new WebDriverWait(driver,timeout);
         element.click();
     }
 

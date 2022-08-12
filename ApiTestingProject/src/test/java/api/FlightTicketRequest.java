@@ -48,7 +48,7 @@ public class FlightTicketRequest {
 
     }
 
-    public void flightTiketFromListByRest(){
+    public void flightTicketFromListByRest(){
 
         response = given()
                 .header("content-type","application/json")
